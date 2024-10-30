@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="SPEED: Epidemic Prediction from Social Media using Event Extraction">
+  <meta property="og:title" content="SPEED"/>
+  <meta property="og:description" content="SPEED: Epidemic Prediction from Social Media using Event Extraction"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>SPEED: Epidemic Prediction from Social Media using Event Extraction</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+  <style>
+    /* Basic styling for the paper list */
+    .paper-list {
+        list-style-type: none;
+        padding: 0;
+    }
+    .paper-item {
+        margin: 10px 0;
+    }
+    .paper-link {
+        text-decoration: none;
+        color: #007bff;
+        font-weight: bold;
+        font-size: 20pt;
+    }
+    .paper-link:hover {
+        text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Epidemic Prediction from Social Media using Event Extraction</h1>
+          <p>We present two amazing works by our group on building generalizable cross-disease, cross-lingual frameworks for detecting, predicting, and providing information about epidemics using social media. The crux of our framework is building robust <b>Event Extraction (EE)</b> models for the social media and epidemiological domains. Here are our two works.</p>
+          <ul class="paper-list">
+            <li class="paper-item">
+                <a href="#paper1-section" class="paper-link">1. Event Detection from Social Media for Epidemic Prediction</a>
+            </li>
+            <li class="paper-item">
+                <a href="#paper2-section" class="paper-link">2. SPEED++: A Multilingual Event Extraction Framework for Epidemic Prediction and Preparedness</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="hero" id="paper1-section" style="background-color: aliceblue">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Event Detection from Social Media for Epidemic Prediction</h1>
+          <div class="is-size-5 publication-authors">
+            <!-- Paper authors -->
+            <span class="author-block"><a href="https://tanmayparekh.github.io/" target="_blank">Tanmay Parekh</a>,</span>
+            <span class="author-block"><a href="https://www.linkedin.com/in/anh-mac/" target="_blank">Anh Mac</a>,</span>
+            <span class="author-block"><a href="https://www.linkedin.com/in/jiarui-yu/" target="_blank">Jiarui Yu</a>,</span>
+            <span class="author-block"><a href="https://www.linkedin.com/in/yuxuanshawndong/" target="_blank">Yuxuan Dong</a>,</span>
+            <span class="author-block"><a href="https://www.linkedin.com/in/syed-s-b41926203/" target="_blank">Syed Shahriar</a>,</span>
+            <span class="author-block"><a href="https://www.linkedin.com/in/bonnieliu2002/" target="_blank">Bonnie Liu</a>,</span>
+            <span class="author-block"><a href="https://www.linkedin.com/in/eric8yang/" target="_blank">Eric Yang</a></span>
+            <br>
+            <span class="author-block"><a href="https://khhuang.me/" target="_blank">Kuan-Hao Huang</a>,</span>
+            <span class="author-block"><a href="https://web.cs.ucla.edu/~weiwang/" target="_blank">Wei Wang</a>,</span>
+            <span class="author-block"><a href="https://violetpeng.github.io/" target="_blank">Nanyun Peng</a>,</span>
+            <span class="author-block"><a href="https://web.cs.ucla.edu/~kwchang/" target="_blank">Kai-Wei Chang</a></span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">University of California Los Angeles<br>2024 Annual Conference of the North American Chapter of the Association for Computational Linguistics (NAACL 2024)</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+                  <!-- Arxiv PDF link -->
+              <span class="link-block">
+                <a href="https://aclanthology.org/2024.naacl-long.322.pdf" target="_blank"
+                class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+
+              <!-- Github link -->
+              <span class="link-block">
+                <a href="https://github.com/PlusLabNLP/SPEED" target="_blank"
+                class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Data</span>
+                </a>
+              </span>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+              Social media is an easy-to-access platform providing timely updates about societal trends and events. Discussions regarding epidemic-related events such as infections, symptoms, and social interactions can be crucial for informing policymaking during epidemic outbreaks. In our work, we pioneer exploiting Event Detection (ED) for better preparedness and early warnings of any upcoming epidemic by developing a framework to extract and analyze epidemic-related events from social media posts. To this end, we curate an epidemic event ontology comprising seven disease-agnostic event types and construct a Twitter dataset SPEED with human-annotated events focused on the COVID-19 pandemic. Experimentation reveals how <b>ED models trained on COVID-based SPEED can effectively detect epidemic events for three unseen epidemics of Monkeypox, Zika, and Dengue</b>; while models trained on existing ED datasets fail miserably. Furthermore, we show that reporting sharp increases in the extracted events by <b>our framework can provide warnings 4-9 weeks earlier than the WHO epidemic declaration for Monkeypox</b>. This utility of our framework lays the foundations for better preparedness against emerging epidemics.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3">What is Event Detection?</h2>
+        <div class="content has-text-justified">
+          <p>
+            Event Detection simply involves identifying semantic events in natural language text. Here's an example of detecting various epidemic-related events like Symptom, Infect, and Death.
+          </p>
+        </div>
+        <img src="static/images/event-detection-example.jpg" alt="Event Detection Example" style="width: 500px; border:1px solid #000000"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3">Epidemic Event Ontology</h2>
+        <div class="content has-text-justified">
+          <p>
+            Here are all the epidemic-related events that are prevalently discussed in social media along with some examples. The core principle during <b>our dataset construction is preserving pandemic-related yet disease-independent.</b> Each event is carefully designed such that it can be generalized to all potential epidemic, and during annotation, the chosen trigger words are generalized as possible such that it is not exclusively defined under COVID context.
+          </p>
+        </div>
+        <img src="static/images/speed-ontology.png" alt="SPEED Ontology Table" style="width: 800px; border:1px solid #000000"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3">Epidemic Event Extraction</h2>
+        <div class="content has-text-justified">
+          <p>
+            We collect multi-disease data for SPEED and provide the statistics of SPEED dataset on the left side below. We benchmark various existing epidemiological works with the trained EE models on our SPEED data - as shown in the right figure below.
+          </p>
+        </div>
+        <img src="static/images/speed-stats.png" alt="SPEED Stats Table" style="width: 300px; border:1px solid #000000; margin-bottom: 55px"/>
+        <img src="static/images/speed-benchmarking.png" alt="SPEED Stats Table" style="width: 300px; border:1px solid #000000; margin-left: 155px"/>
+        <br>
+        <div class="content has-text-justified">
+          <p>
+            <b>SPEED models perform much better in the zero-shot disease transfer scenario compared to other baselines.</b> More importantly, the performance of our zero-shot models is at par with models trained on limited target epidemic data - highlighting the strong utility of our model.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3">Epidemic Prediction</h2>
+        <div class="content has-text-justified">
+          <p>
+            To evaluate the practical validity, we aggregate the epidemic-based events predicted by our SPEED framework across time. Any sharp increases in the events are reported as epidemic warnings. We conduct this study for Monkeypox epidemic of 2022 (based on models trained on COVID-19 data of 2020) and show the warnings with the number of cases in the figure below.
+          </p>
+        </div>
+        <img src="static/images/mpox-prediction.png" alt="SPEED Stats Table" style="width: 600px; border:1px solid #000000; margin-bottom: 20px"/>
+        <div class="content has-text-justified">
+          <p>
+            <b>Our framework can provide warnings 4-9 weeks before the WHO warning declaring Monkeypox as a global health concern</b> - highlighting the practical utility of our work.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3">Qualitative Examples of Actual Tweets</h2>
+        <div class="content has-text-justified">
+            <p>
+              Here are examplar extracted events extracted by our framework from actual tweets.
+            </p>
+          </div>
+        <img src="static/images/actual-tweets.png" alt="SPEED Stats Table" style="width: 700px; border:1px solid #000000"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3">Event-based Disease Profiling</h2>
+        <div class="content has-text-justified">
+          <p>
+            Another way to use our framework is to generate event-based disease profiles (based on proportion of different events extracted) using public sentiments, which can provide high-level overview of what people are talking/concerned about regarding the epidemic. We provide the disease-profiles of various diseases developed through our framework below.
+          </p>
+        </div>
+        <img src="static/images/disease-profiling.png" alt="SPEED Stats Table" style="width: 500px; border:1px solid #000000"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--============================================================================ SPEED++ ============================================================================-->
+
+<section class="hero" id="paper2-section" style="background-color: aliceblue">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">SPEED++: A Multilingual Event Extraction Framework for Epidemic Prediction and Preparedness</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block"><a href="https://tanmayparekh.github.io/" target="_blank">Tanmay Parekh</a>,</span>
+              <span class="author-block"><a href="https://www.linkedin.com/in/jkwan314" target="_blank">Jeffrey Kwan</a>,</span>
+              <span class="author-block"><a href="https://www.linkedin.com/in/jiarui-yu/" target="_blank">Jiarui Yu</a>,</span>
+              <span class="author-block"><a href="https://www.linkedin.com/in/" target="_blank">Sparsh Johri</a>,</span>
+              <span class="author-block"><a href="https://www.linkedin.com/in/hyosang-ahn/" target="_blank">Hyosang Ahn</a>,</span>
+              <span class="author-block"><a href="https://www.linkedin.com/in/" target="_blank">Sreya Muppalla</a></span><br>
+              <span class="author-block"><a href="https://web.cs.ucla.edu/~kwchang/" target="_blank">Kai-Wei Chang</a>,</span>
+              <span class="author-block"><a href="https://web.cs.ucla.edu/~weiwang/" target="_blank">Wei Wang</a>,</span>
+              <span class="author-block"><a href="https://violetpeng.github.io/" target="_blank">Nanyun Peng</a></span>
+            </div>
+  
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">University of California, Los Angeles<br>The 2024 Conference on Empirical Methods in Natural Language Processing (EMNLP 2024)</span>
+            </div>
+  
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                    <!-- Arxiv PDF link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2410.18393.pdf" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+  
+                <!-- Github link -->
+                <span class="link-block">
+                  <a href="https://github.com/TanmayParekh/SPEED-plus-plus" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Data</span>
+                  </a>
+                </span>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Social media is often the first place where communities discuss the latest societal trends. Prior works have utilized this platform to extract epidemic-related information (e.g. infections, preventive measures) to provide early warnings for epidemic prediction. However, these works only focused on English posts, while epidemics can occur anywhere in the world, and early discussions are often in the local, non-English languages. In this work, we introduce the <b>first multilingual Event Extraction (EE) framework SPEED++ for extracting epidemic event information</b> for a wide range of diseases and languages. To this end, we extend a previous epidemic ontology with 20 argument roles; and curate our multilingual EE dataset SPEED++ comprising 5.1K tweets in four languages for four diseases. Annotating data in every language is infeasible; thus we develop zero-shot cross-lingual cross-disease models (i.e., training only on English COVID data) utilizing multilingual pre-training and show their efficacy in extracting epidemic-related events for 65 diverse languages across different diseases. Experiments demonstrate that <b>our framework can provide epidemic warnings for COVID-19 in its earliest stages in Dec 2019 (3 weeks before global discussions) from Chinese Weibo posts without any training in Chinese.</b> Furthermore, we exploit our framework's argument extraction capabilities to <b>aggregate community epidemic discussions like symptoms and cure measures, aiding misinformation detection and public attention monitoring.</b> Overall, we lay a strong foundation for multilingual epidemic preparedness.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+  
+<!-- EAE Explanation & Example -->
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3">From Event Detection to Event Extraction</h2>
+        <div class="content has-text-justified">
+          <p>
+              Event Extraction extends Event Detection (ED) by not only identifying the event triggers but also corresponding arguments (event-related information) from natural language text. Here's an example of detecting various epidemic-related events like Infect and Control.
+          </p>
+        </div>
+        <img src="static/images/english-ee-example.png" alt="Event Extraction Example" style="width: 600px"/>
+        <div class="content has-text-justified">
+            <p>
+              Since our work focuses on multilinguality, we also provide some example for Hindi here below.
+            </p>
+          </div>
+          <img src="static/images/hindi-ee-example.png" alt="Event Extraction Example" style="width: 600px"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EAE Ontology -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3">Epidemic Event Ontology</h2>
+        <div class="content has-text-justified">
+            <p>
+              We improve the existing SPEED ontology by supplementing each event with corresponding arguments. We provide this enriched ontology below.
+            </p>
+          </div>
+        <img src="static/images/Table1.png" alt="SPEED++ Ontology Table" style="width: 400px; border:1px solid #000000"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Experimental Benchmarking -->
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3">Experimental Benchmarking</h2>
+        <div class="content has-text-justified">
+          <p>
+            We train models in a <b>zero-shot cross-lingual cross-disease setup.</b> To evaluate the models, we annotate some EE data in three other languages. Below, we provide the multilingual statistics of our SPEED++ dataset. Starting from the left, we have: (a) number of sentences per language, (b) average length of each sentence, (c) number of event mentions, and (d) number of supporting arguments.
+          </p>
+        </div>
+        <img src="static/images/Table3.png" alt="SPEED++ Data Statistics" style="width: 400px; border:1px solid #000000"/>
+        <div class="content has-text-justified">
+          <p>
+            To benchmark models in the zero-shot cross-lingual cross-disease setup, we consider the following data splits.
+          </p>
+        </div>
+        <img src="static/images/Table4.png" alt="SPEED++ Split for Event Extraction" style="width: 400px; border:1px solid #000000"/>
+        <div class="content has-text-justified">
+          <p>
+            We train cross-lingual models using TagPrime and synthetic data generation using CLaP on our SPEED++ data. We benchmark our model with various works and show the performances below.
+          </p>
+        </div>
+        <img src="static/images/speed++-performance.png" alt="SPEED++ Split for Event Extraction" style="width: 400px; border:1px solid #000000"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Global Epidemic Tracking -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3">Global Epidemic Tracking</h2>
+        <div class="content has-text-justified">
+          <p>
+            To practically utilize our work, we study its utility for global epidemic trends by plotting the extracted events per language with the number of infections in each country below, all written in a single day &#40;May 28, 2020&#41;. We show a <b>strong correlation of 0.73 across 65 languages and 117 countries</b> - highlighting the strong practicality of our work for global epidemic tracking.
+          </p>
+        </div>
+        <img src="static/images/events-vs-cases-flattened-1.png" alt="Epidemic Event Correlation Table" style="width: 600px; border:1px solid #000000"/>
+        <div class="content has-text-justified">
+          <p>
+            We also show a geographical correlation for European countries as shown below. The blue circles indicate the number of extracted events using our framework.
+          </p>
+        </div>
+        <img src="static/images/europe-map-plot-1.png" alt="Europe Graph" style="width: 600px; border:1px solid #000000"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Multilingual Epidemic Prediction -->
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3">Zero-shot Multilingual Epidemic Prediction</h2>
+        <div class="content has-text-justified">
+          <p>
+            To further demonstrate the strength of our framework's multilingual capabilities, we utilize SPEED++ framework for Chinese Weibo posts in a zero-shot way (no training on Chinese) for providing epidemic warnings for COVID-19, as shown below.
+          </p>
+        </div>
+        <img src="static/images/teaser-figure-1.png" alt="Epidemic Warning Benchmarking" style="width: 600px"/>
+        <div class="content has-text-justified">
+          <p>
+              The epidemic warnings indicated by the sharp increases in aggreagated events highlight the significance of our framework which could provide warnings as early as Dec 30 - 3 weeks before global infection tracking even began.<br><br>
+              We further provide some qualitative posts and extracted events by our model below.
+          </p>
+        </div>
+        <img src="static/images/Table6.png" alt="Event detection in Chinese social media text" style="width: 400px; border:1px solid #000000"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Global Epidemic Tracking -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3">Epidemic Information Aggregation</h2>
+        <div class="content has-text-justified">
+          <p>
+            Finally, we develop an information aggregation system utilizing the argument extraction capability of our framework. Specifically, we aggregate and cluster extracted arguments across social media for each disease, argument, and language. We demonstrate some of the top relevant ones below.
+          </p>
+        </div>
+        <img src="static/images/bulletin.png" alt="Epidemic Event Correlation Table" style="width: 800px; border:1px solid #000000"/>
+        <div class="content has-text-justified">
+          <p>
+            Manual inspection shows the strong argument extraction capability of our framework. Such an information aggregation can be utilized for better epidemic preparedness through public attention shift monitoring as well as misinformation detection.<br><br>
+            We further provide some qualitative posts for multilingual arguments extracted by our framework below.
+          </p>
+        </div>
+        <img src="static/images/Table7.png" alt="Misinformation Detection" style="width: 400px; border:1px solid #000000"/>
+      </div>
+    </div>
+  </div>
+</section>
+  
+  <!-- Image carousel 
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <div id="results-carousel" class="carousel results-carousel">
+         <div class="item">
+
+          <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
+          <h2 class="subtitle has-text-centered">
+            First image description.
+          </h2>
+        </div>
+        <div class="item">
+
+          <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
+          <h2 class="subtitle has-text-centered">
+            Second image description.
+          </h2>
+        </div>
+        <div class="item">
+
+          <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
+          <h2 class="subtitle has-text-centered">
+           Third image description.
+         </h2>
+       </div>
+       <div class="item">
+        <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          Fourth image description.
+        </h2>
+      </div>
+    </div>
+  </div>
+  </div>
+  </section>
+  End image carousel -->
+  
+  
+  
+  
+  <!-- Youtube video 
+  <section class="hero is-small is-light">
+    <div class="hero-body">
+      <div class="container">
+        
+        <h2 class="title is-3">Video Presentation</h2>
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            
+            <div class="publication-video">
+              
+              <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+   End youtube video -->
+  
+  
+  <!-- Video carousel 
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title is-3">Another Carousel</h2>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item item-video1">
+            <video poster="" id="video1" autoplay controls muted loop height="100%">
+              
+              <source src="static/videos/carousel1.mp4"
+              type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-video2">
+            <video poster="" id="video2" autoplay controls muted loop height="100%">
+              
+              <source src="static/videos/carousel2.mp4"
+              type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-video3">
+            <video poster="" id="video3" autoplay controls muted loop height="100%">\
+              
+              <source src="static/videos/carousel3.mp4"
+              type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+   End video carousel -->
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title is-3">BibTeX</h2>
+      <br>
+      <p>If you find our work inspirational or useful for your research, you can cite our works as below.</p>
+      <h3 class="subtitle">SPEED</h3>
+      <pre><code>@misc{parekh2024eventdetectionsocialmedia,
+        title={Event Detection from Social Media for Epidemic Prediction}, 
+        author={Tanmay Parekh and Anh Mac and Jiarui Yu and Yuxuan Dong and Syed Shahriar and Bonnie Liu and Eric Yang and Kuan-Hao Huang and Wei Wang and Nanyun Peng and Kai-Wei Chang},
+        year={2024},
+        eprint={2404.01679},
+        archivePrefix={arXiv},
+        primaryClass={cs.CL},
+        url={https://arxiv.org/abs/2404.01679}, 
+  }</code></pre>
+      <h3 class="subtitle">SPEED++</h3>
+      <pre><code>@misc{parekh2024speedmultilingualeventextraction,
+        title={SPEED++: A Multilingual Event Extraction Framework for Epidemic Prediction and Preparedness}, 
+        author={Tanmay Parekh and Jeffrey Kwan and Jiarui Yu and Sparsh Johri and Hyosang Ahn and Sreya Muppalla and Kai-Wei Chang and Wei Wang and Nanyun Peng},
+        year={2024},
+        eprint={2410.18393},
+        archivePrefix={arXiv},
+        primaryClass={cs.CL},
+        url={https://arxiv.org/abs/2410.18393}, 
+  }</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
